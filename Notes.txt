@@ -1,0 +1,12 @@
+The role of a controller class is to really deal with the way that the application's process flow works. It is to work out which webpage to display and to read data
+in from webpages when there's a form there, and to control the process flow, if you like, of how the web application works. We shouldn't really have business
+logic in the middle of a method of a controller.
+Ideally, it would be better to extract this business logic code to a separate class, a separate method that's completely isolated from the controller,
+we normally called that a service class.
+
+If we have the code in an isolated class, of course is much easier to test. We can forget about this controller and just instantiate the instance
+of that business logic and test it in isolation.
+
+Spy objects:
+doReturn(return_value).when(spy_object).method_call(params);
+

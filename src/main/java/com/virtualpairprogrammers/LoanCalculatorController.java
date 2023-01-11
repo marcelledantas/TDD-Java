@@ -53,7 +53,17 @@ public class LoanCalculatorController {
 		mailSender.send(message);
 		
 		return new ModelAndView("requestAccepted");
-	} 
-	
-	
+	}
+
+	public void setData(LoanRepository data) {
+		this.data = data;
+	}
+
+	public void setMailSender(JavaMailSender mailSender) {
+		this.mailSender = mailSender;
+	}
+
+	public void setRestTemplate(RestTemplate restTemplate) {
+		this.restTemplate = restTemplate;
+	}
 }
